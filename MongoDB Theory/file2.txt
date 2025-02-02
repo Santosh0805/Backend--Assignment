@@ -1,0 +1,58 @@
+1. What is a NoSQL Database, and explain the types of NoSQL database?
+   ANS: NoSQL databases are designed to store, manage, and retrieve data that is modeled in means other than the tabular relations used in relational databases. Types of NoSQL databases include:
+     - Document-Oriented Databases: Store data as documents (e.g., MongoDB).
+     - Key-Value Stores: Store data as key-value pairs (e.g., Redis).
+     - Column-Family Stores: Store data in columns rather than rows (e.g., Cassandra).
+     - Graph Databases: Store data as graphs with nodes and edges (e.g., Neo4j).
+
+2. What is the difference between SQL and NoSQL databases?
+   ANS: 
+     - SQL databases are relational, structured, and use a schema to define data tables, while NoSQL databases are non-relational, schema-less, and flexible in handling various types of data.
+     - SQL databases use SQL for querying, while NoSQL databases have different query languages depending on the database type.
+     - SQL databases are vertically scalable, whereas NoSQL databases are typically horizontally scalable.
+
+3. How to choose between MongoDB and MySQL based on your requirements?
+   ANS: Choose MongoDB if you need:
+     - Flexible schema design for handling unstructured data.
+     - High write throughput and easy horizontal scalability.
+     - Document-oriented data storage.
+     Choose MySQL if you need:
+     - Structured data storage with complex relationships.
+     - ACID (Atomicity, Consistency, Isolation, Durability) compliance.
+     - Mature tooling and widespread use for relational data.
+
+4. What are collections and documents in a MongoDB database?
+   ANS: Collections in MongoDB are analogous to tables in relational databases and store documents. Documents are individual records in a collection and are stored in a JSON-like format called BSON.
+
+5. What is BSON? What is the difference between BSON and JSON?
+   ANS: BSON (Binary JSON) is a binary representation of JSON-like documents. The difference between BSON and JSON is that BSON is designed to be efficient in both storage space and scan speed, supporting data types not available in JSON, such as Date and BinData.
+
+6. What are MongoDB Compass and MongoDB Shell used for?
+   ANS: 
+     - MongoDB Compass is a GUI tool for visualizing, manipulating, and analyzing MongoDB data.
+     - MongoDB Shell (mongosh) is a command-line interface for interacting with MongoDB, executing queries, and performing administrative tasks.
+
+7. How to create collections in MongoDB?
+   ANS: Collections can be created explicitly using `db.createCollection("collection_name")` or implicitly by inserting a document into a non-existent collection using `db.collection_name.insertOne(document)`.
+
+8. What is the difference between insertMany and insertOne?
+   ANS: 
+     - `insertOne` inserts a single document into a collection.
+     - `insertMany` inserts multiple documents into a collection in a single operation.
+
+9. What is the difference between deleteOne and deleteMany?
+   ANS: 
+     - `deleteOne` deletes a single document that matches the filter criteria.
+     - `deleteMany` deletes all documents that match the filter criteria.
+
+10. How to read data in MongoDB? What is the difference between find and findOne?
+    ANS: 
+      - Data can be read using `find` and `findOne` methods.
+      - `find` retrieves all documents that match the query criteria.
+      - `findOne` retrieves the first document that matches the query criteria.
+
+11. What is $set in MongoDB?
+    ANS: `$set` is an update operator used to update the value of a field in a document. If the field does not exist, `$set` adds it.
+
+12. How to filter data using MongoDB?
+    ANS: Data can be filtered using the `find` method with query criteria. For example, `db.collection_name.find({ field: value })` filters documents where the specified field matches the given value.
